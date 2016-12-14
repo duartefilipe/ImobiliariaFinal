@@ -59,7 +59,7 @@ public class RedirectController {
 			rq.setAttribute("imoAl", i);
 			return "Imobiliaria/AlterarImovelAluga";
 		}
-		
+	
 		@RequestMapping("RedAlteraImovelVenda")
 		public String redirectAlteraImovelVenda(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
 			
