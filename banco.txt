@@ -1,0 +1,4 @@
+create table imobiliaria (id serial primary key, nome varchar(50), cidade varchar(50), endereco varchar(50), telefone varchar(50), cnpj varchar(50), email varchar(50), senha varchar(50), tipo varchar(50));
+insert into imobiliaria (nome, cidade, endereco, telefone, cnpj, email, senha, tipo) values ('admin', 'Santa Maria', 'Evaldo Behr 180', '91019105', '86565745745', 'filipeduarte@gmail.com', '123', '1');
+
+create table imovel(id serial primary key, cidade varchar(50), endereco varchar(50), valor varchar(50), caracteristicas varchar(50), tipo varchar(50), imagem varchar(200));
