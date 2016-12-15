@@ -17,13 +17,6 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="RedInicioImob">Inicio</a></li>
-					
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imobiliarias <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<c:forEach var="imobiliaria" items="${imobiliaria}">
-								<li><a href="#">${imobiliaria.nome}</a></li>
-							</c:forEach>
-						</ul></li>
 
 					<li><a href="index">Sair</a></li>
 				</ul>

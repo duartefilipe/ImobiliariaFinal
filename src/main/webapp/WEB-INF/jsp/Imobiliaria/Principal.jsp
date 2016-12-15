@@ -74,7 +74,7 @@
 							
 							<c:forEach var="aluga" items="${aluga}">
 								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
+									<a class="thumbnail">
 									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
 										<p align="center">
 											<font color="#000000">${aluga.cidade}</font>
@@ -100,7 +100,7 @@
 							<hr> 
 							<c:forEach var="vende" items="${vende}">
 								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}"">
+									<a class="thumbnail">
 										<img src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg" alt="">
 										<p align="center">
 											<font color="#000000">${vende.cidade}</font>

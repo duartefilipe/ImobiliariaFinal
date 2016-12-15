@@ -44,7 +44,7 @@ public class UsuarioController {
 				
 			}else{
 					rq.setAttribute("msg","Problemas ao Logar");
-					return "erro";
+					return "index";
 				
 				
 			}
