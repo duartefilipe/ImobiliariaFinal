@@ -41,7 +41,34 @@ public class RedirectController {
 		return "Administrador/360";
 	}
 	
+	@RequestMapping("RedSobreIndex")
+	public String redirectSobre(HttpServletRequest rq) throws ClassNotFoundException{
+		return "Sobre";
+	}
+	
+	@RequestMapping("RedContato")
+	public String redirectContato(HttpServletRequest rq) throws ClassNotFoundException{
+		return "Contato";
+	}
+	
+	@RequestMapping("RedLocacao")
+	public String redirectLocacao(HttpServletRequest rq) throws ClassNotFoundException{
+		return "Locacao";
+	}
+	
+	@RequestMapping("RedVenda")
+	public String redirectVenda(HttpServletRequest rq) throws ClassNotFoundException{
+		return "Venda";
+	}
+	
+	@RequestMapping("RedListaImobiliarias")
+	public String redirectListaImobiliarias(HttpServletRequest rq) throws ClassNotFoundException{
+		return "ListaImobiliarias";
+	}
+	
+	
 
+	
 	//-----------------------------------------Imoveis------------------------------------------------
 	
 		@RequestMapping("RedAlteraImovelAluga")
@@ -76,7 +103,19 @@ public class RedirectController {
 			return "Imobiliaria/AlterarImovelVende";
 		}
 		
-		
+		@RequestMapping("RedMostraCasa")
+		public String redirectMostraCasa(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+			
+			int id = Integer.parseInt(rq.getParameter("id"));
+			
+			Imovel i = new Imovel();
+			ImovelDao iD = new ImovelDao();
+			
+			i = iD.pesquisaImovel(id);
+			
+			rq.setAttribute("imo", i);
+			return "InformacoesImovel";
+		}
 		
 		//-----------------------------------------imoveis fim------------------------------------------------
 		
@@ -96,6 +135,22 @@ public class RedirectController {
 			
 			rq.setAttribute("imo", i);
 			return "Administrador/AlteraImobiliaria";
+		}
+		
+		@RequestMapping("RedAlteraImovelAdmin")
+		public String redirectAlteraImovelAdmin(HttpServletRequest rq) throws ClassNotFoundException, SQLException{
+			
+			int id = Integer.parseInt(rq.getParameter("id"));
+			
+			System.out.println("AQUI NO REDIRECT imovel ALTERA"+id);
+			
+			Imovel i = new Imovel();
+			ImovelDao iD = new ImovelDao();
+			
+			i = iD.pesquisaImovel(id);
+			
+			rq.setAttribute("imo", i);
+			return "Administrador/AlteraImovelAdmin";
 		}
 		
 		

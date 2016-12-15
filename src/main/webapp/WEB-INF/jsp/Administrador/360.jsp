@@ -17,13 +17,6 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="RedInicioAdm">Inicio</a></li>
-					
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imobiliarias <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<c:forEach var="imobiliaria" items="${imobiliaria}">
-								<li><a href="#">${imobiliaria.nome}</a></li>
-							</c:forEach>
-						</ul></li>
 
 					<li><a href="index">Sair</a></li>
 				</ul>
@@ -33,7 +26,7 @@
 
 	<br>
 	<br>
-	
+	<br>
 	
 	
 	<div class="container-fluid text-center"
@@ -67,7 +60,7 @@
 				</span>
 				<hr>
 
-				<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
+				<h3 style="color: #FFFFFF">Seção 360°</h3>
 				<hr>
 						<iframe  src="https://www.google.com/maps/embed?pb=!1m0!3m2!1spt-BR!2sbr!4v1481676716011!6m8!1m7!1sEDsuhhXlocTqBjjptGbCTQ!2m2!1d-29.70580266065869!2d-53.71607204585813!3f167.55287659894026!4f-9.199779259299106!5f0.7820865974627469"
 							width="600" height="450" frameborder="3" style="border: 0" allowfullscreen>

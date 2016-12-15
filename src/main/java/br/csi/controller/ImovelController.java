@@ -53,5 +53,21 @@ public class ImovelController {
 				rq.setAttribute("msg","problemas ao alterar professor");
 				return "erro";
 			}
-	}		
+	}	
+	
+	@RequestMapping("AlteraImovelAdmin")
+	public String AlteraImovelAdmin(Imovel i, HttpServletRequest rq) throws NoSuchAlgorithmException, ClassNotFoundException, SQLException{
+		
+		ImovelDao iD = new ImovelDao();
+		
+			boolean retorno = iD.alteraImovel(i);
+			
+			System.out.println("No Altera professor  :   "+retorno);
+			if(retorno){
+				return "Administrador/Imoveis";
+			}else{
+				rq.setAttribute("msg","problemas ao alterar professor");
+				return "erro";
+			}
+	}	
 }	

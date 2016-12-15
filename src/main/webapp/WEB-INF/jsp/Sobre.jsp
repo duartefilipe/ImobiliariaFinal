@@ -72,37 +72,14 @@
 				<div class="row">
 					<div class="container-fluid">
 						<span style="color: #80BFFF">
-							<h3 align="center">Imoveis em Destaque</h3>
+							<h3 align="center">Quem Somos</h3></span>
 							<hr>
-
-							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
-							<hr> <c:forEach var="aluga" items="${aluga}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
-									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="container-fluid">
-						<span style="color: #80BFFF">
-
-							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
-							<hr> 
-							<c:forEach var="vende" items="${vende}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}""> <img
-										src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg"
-										alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
+							<span style="color: #FFFFFF"><p>Somos um grupo de pessoas que se cansaram em ter que ficar procurando em muitos sites 
+							de imobiliarias para encontrar algum imovel.<br>
+							Resolvemos criar um lugar onde seja possivel encontrar casas de diversas imobiliarias em<br>
+							um unico só lugar.
+							Facilitando assim a sua vida.</p></span>
+							
 					</div>
 				</div>
 			</div>
@@ -149,9 +126,9 @@
 		</div>
 	</div>
 
-	<!-- Modal  mostra casa-->
-	<div class="modal fade" id="modalmostra" tabindex="-1"
-		role="dialog" aria-labelledby="modalmostraLabel">
+	<!-- Modal  Cadastra imobiliaria-->
+	<div class="modal fade" id="modalcadastraimobiliaria" tabindex="-1"
+		role="dialog" aria-labelledby="modalcadastraimobiliariaLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content" style="border-radius: 10px">
 				<div class="modal-header" style="background-color: #504E4E">
@@ -159,7 +136,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<span style="color: #80BFFF">
-						<h4 class="modal-title" id="modalmostraLabel">Cadastrar</h4>
+						<h4 class="modal-title" id="modalcadastraimobiliariaLabel">Cadastrar</h4>
 					</span>
 				</div>
 				<div class="modal-body">

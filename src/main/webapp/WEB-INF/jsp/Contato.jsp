@@ -72,37 +72,18 @@
 				<div class="row">
 					<div class="container-fluid">
 						<span style="color: #80BFFF">
-							<h3 align="center">Imoveis em Destaque</h3>
+							<h3 align="center">Quem Somos</h3></span>
 							<hr>
-
-							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
-							<hr> <c:forEach var="aluga" items="${aluga}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
-									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="container-fluid">
-						<span style="color: #80BFFF">
-
-							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
-							<hr> 
-							<c:forEach var="vende" items="${vende}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}""> <img
-										src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg"
-										alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
+							<span style="color: #FFFFFF">
+							<p><h2>Para entrar em Contato basta enviar um email para:</h2><br>
+							Imobiliaria@gmail.com<br>
+							Ou pode nos ligar nos numeros:<br>
+							(55)81716182<br>
+							(55)81716182<br>
+							Nosso endereço é:<br>
+							Avenida Roraima 1029<br>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.2736108062504!2d-53.71869498540062!3d-29.711832682004598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503b5e74b0cdc29%3A0x9a68f32f7fdea694!2sAv.+Roraima%2C+1029+-+Camobi%2C+Santa+Maria+-+RS%2C+97105-340!5e0!3m2!1spt-BR!2sbr!4v1481756509532" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p></span>
+							
 					</div>
 				</div>
 			</div>
@@ -149,9 +130,9 @@
 		</div>
 	</div>
 
-	<!-- Modal  mostra casa-->
-	<div class="modal fade" id="modalmostra" tabindex="-1"
-		role="dialog" aria-labelledby="modalmostraLabel">
+	<!-- Modal  Cadastra imobiliaria-->
+	<div class="modal fade" id="modalcadastraimobiliaria" tabindex="-1"
+		role="dialog" aria-labelledby="modalcadastraimobiliariaLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content" style="border-radius: 10px">
 				<div class="modal-header" style="background-color: #504E4E">
@@ -159,7 +140,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<span style="color: #80BFFF">
-						<h4 class="modal-title" id="modalmostraLabel">Cadastrar</h4>
+						<h4 class="modal-title" id="modalcadastraimobiliariaLabel">Cadastrar</h4>
 					</span>
 				</div>
 				<div class="modal-body">

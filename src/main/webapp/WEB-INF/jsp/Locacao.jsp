@@ -72,10 +72,8 @@
 				<div class="row">
 					<div class="container-fluid">
 						<span style="color: #80BFFF">
-							<h3 align="center">Imoveis em Destaque</h3>
-							<hr>
+							<h3 align="center">Imoveis Para Alugar</h3>
 
-							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
 							<hr> <c:forEach var="aluga" items="${aluga}">
 								<div class="col-sm-6 col-md-3">
 									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
@@ -87,24 +85,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="row">
-					<div class="container-fluid">
-						<span style="color: #80BFFF">
-
-							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
-							<hr> 
-							<c:forEach var="vende" items="${vende}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}""> <img
-										src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg"
-										alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

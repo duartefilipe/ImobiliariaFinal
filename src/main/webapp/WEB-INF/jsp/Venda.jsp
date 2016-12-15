@@ -72,26 +72,7 @@
 				<div class="row">
 					<div class="container-fluid">
 						<span style="color: #80BFFF">
-							<h3 align="center">Imoveis em Destaque</h3>
-							<hr>
-
-							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
-							<hr> <c:forEach var="aluga" items="${aluga}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
-									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="container-fluid">
-						<span style="color: #80BFFF">
-
-							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
+							<h3 align="center">Imoveis Para Venda</h3>
 							<hr> 
 							<c:forEach var="vende" items="${vende}">
 								<div class="col-sm-6 col-md-3">

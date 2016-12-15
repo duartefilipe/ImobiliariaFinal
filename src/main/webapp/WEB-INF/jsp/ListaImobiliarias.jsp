@@ -59,8 +59,8 @@
 					<a class="list-group-item text text-center"
 						style="background: #504E4E"> <span style="color: #80BFFF">MENU
 					</span></a> <a href="RedLocacao" class="list-group-item"> locaçao </a> <a
-						href="RedVenda" class="list-group-item"> Venda </a> <a href="RedListaImobiliarias"
-						class="list-group-item"> Imobiliarias </a>
+						href="RedVenda" class="list-group-item"> Venda </a>
+						<a href="RedListaImobiliarias" class="list-group-item"> Imobiliarias </a>
 				</div>
 			</div>
 		</div>
@@ -72,36 +72,35 @@
 				<div class="row">
 					<div class="container-fluid">
 						<span style="color: #80BFFF">
-							<h3 align="center">Imoveis em Destaque</h3>
-							<hr>
-
-							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
-							<hr> <c:forEach var="aluga" items="${aluga}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
-									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
-
-									</a>
-								</div>
-							</c:forEach>
-						</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="container-fluid">
-						<span style="color: #80BFFF">
-
-							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
+							<h3 align="center">Lista de Imobiliarias Cadastradas</h3>
 							<hr> 
-							<c:forEach var="vende" items="${vende}">
-								<div class="col-sm-6 col-md-3">
-									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}""> <img
-										src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg"
-										alt="">
-
-									</a>
-								</div>
-							</c:forEach>
+							<section>
+												<style>
+													table {
+													table-layout: fixed;
+													word-wrap: break-word;
+													}
+													</style>
+								<table class="text-center table table-bordered" >
+														<thead>
+															<tr>
+																<th class="text-center"><span style="color: #FFFFFF">Nome</span></th>
+																<th class="text-center"><span style="color: #FFFFFF">Telefone</span></th>
+																<th class="text-center"><span style="color: #FFFFFF">Endereço</span></th>
+				
+															</tr>
+														</thead>
+													<tbody>
+														<c:forEach var="imobiliaria" items="${imobiliaria}">
+															<tr>
+																<td><span style="color: #FFFFFF">${imobiliaria.nome}</span></td>
+																<td><span style="color: #FFFFFF">${imobiliaria.telefone}</span></td>
+																<td><span style="color: #FFFFFF">${imobiliaria.endereco}</span></td>
+															</tr>
+														</c:forEach>
+												</tbody>
+											</table>
+									</section>
 						</span>
 					</div>
 				</div>

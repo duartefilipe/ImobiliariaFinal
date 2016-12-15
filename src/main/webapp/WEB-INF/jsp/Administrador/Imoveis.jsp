@@ -10,7 +10,6 @@
 <title>Imobiliaria</title>
 </head>
 <body>
-
 	<jsp:useBean id="log2" class="br.csi.modelo.dao.ImovelDao" />
 	<c:set var="aluga" value="${log2.getImoveisAl()}" />
 	
@@ -20,18 +19,15 @@
 	<jsp:useBean id="log4" class="br.csi.modelo.dao.ImobiliariaDao" />
 	<c:set var="imobiliaria" value="${log4.getImobiliarias()}" />
 	
+	
+	
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="RedInicioAdm">Inicio</a></li>
 					
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imobiliarias <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<c:forEach var="imobiliaria" items="${imobiliaria}">
-								<li><a href="#">${imobiliaria.nome}</a></li>
-							</c:forEach>
-						</ul></li>
+					
 
 					<li><a href="index">Sair</a></li>
 				</ul>
@@ -41,7 +37,7 @@
 
 	<br>
 	<br>
-	
+	<br>
 	
 	
 	<div class="container-fluid text-center"
@@ -66,53 +62,66 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="col-md-9">
-			<div class="container-fluid responsive" style="background-color: #504E4E; border-radius: 10px">
-				<span style="color: #FFFFFF">
-					<h2 align="center">Pagina principal da imobiliaria</h2></span>
-					<hr>
-						
-						<h3 style="color: #FFFFFF">Imoveis Aluguel</h3><hr>
-						<c:forEach var="aluga" items="${aluga}">
-							<div class="col-sm-6 col-md-3">
-								<a class="thumbnail" href="#">
-								<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg"
-									alt="">
-									<p align="center">
+			<div class="container-fluid responsive"
+				style="background-color: #504E4E; border-radius: 10px">
+				<div class="row">
+					<div class="container-fluid">
+						<span style="color: #80BFFF">
+							<h3 align="center">Imoveis em Destaque</h3>
+							<hr>
+
+							<h3 style="color: #FFFFFF">Imoveis Aluguel</h3>
+							<hr> <c:forEach var="aluga" items="${aluga}">
+								<div class="col-sm-6 col-md-3">
+									<a class="thumbnail" href="RedMostraCasa?id=${aluga.id}">
+									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
+										<p align="center">
 										<font color="#000000">${aluga.cidade}</font>
 										<a href="RemoverImovel?id=${aluga.id}" >
 											<i class="glyphicon glyphicon-remove" style="color: red; font-size: 25px;"></i>
 										</a>
-                                        <a href="RedAlteraImovelAluga?id=${aluga.id}">
+                                        <a href="RedAlteraImovelAdmin?id=${aluga.id}">
                                         	<i style="font-size: 25px;" class="glyphicon glyphicon-refresh"></i>
                                         </a>
 									</p>
-								</a>
-							</div>
-						</c:forEach>
-					</div>	
-						
-					<div class="container-fluid responsive" style="background-color: #504E4E; border-radius: 10px">
-						<h3 style="color: #FFFFFF">Imoveis Venda</h3><hr>
-						<c:forEach var="vende" items="${vende}">
-							<div class="col-sm-6 col-md-3" id="${vende.id }">
-								<a class="thumbnail" href="#">
-									<img src="http://www.plantasdecasas.com/wp-content/uploads/2012/11/Casa-de-Campo-Minas-Gerais-Cod.-400-590x300.jpg" alt="">
-									<p align="center">
+									</a>
+								</div>
+							</c:forEach>
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="container-fluid">
+						<span style="color: #80BFFF">
+
+							<h3 style="color: #FFFFFF">Imoveis Venda</h3>
+							<hr> 
+							<c:forEach var="vende" items="${vende}">
+								<div class="col-sm-6 col-md-3">
+									<a class="thumbnail" href="RedMostraCasa?id=${vende.id}""> <img
+										src="http://quinan.com/wp-content/uploads/2015/07/Fachadas-de-casas-modernas-o-cartao-de-visita-do-lar-13-2.jpg"
+										alt="">
+											<p align="center">
 										<font color="#000000">${vende.cidade}</font>
 										
 										<a href="RemoverImovel?id=${vende.id}" ><i class="glyphicon glyphicon-remove" style="color: red; font-size: 25px;"></i></a>
-                                        <a href="RedAlteraImovelVenda?id=${vende.id}">
+                                        <a href="RedAlteraImovelAdmin?id=${vende.id}">
                                         	<i style="font-size: 25px;" class="glyphicon glyphicon-refresh"></i>
                                         </a>
 										
 									</p>
-								</a>
-							</div>
-						</c:forEach>
+									</a>
+								</div>
+							</c:forEach>
+						</span>
 					</div>
+				</div>
 			</div>
+		</div>
+
+		
 			
 	<!-- 
 	<footer class="footer" style="background-color: #504E4E">
